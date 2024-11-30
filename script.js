@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('sudoku-grid');
     const solveButton = document.getElementById('solve-button');
+    const undoButton = document.getElementById('undo-button');
+    const clearButton = document.getElementById('clear-button');
     const gridButtons = document.querySelectorAll('.grid-button');
     let SIZE = 9;
 
