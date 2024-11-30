@@ -8,30 +8,36 @@
 </head>
 <body>
     
+   
     <div id="container">
-    <h2>Sudoku Solver</h2>
-    
-    <!-- Grid Size Buttons -->
-    <div class="button-container">
-        <button class="grid-button" data-size="3">3x3 Sudoku</button>
-        <button class="grid-button" data-size="6">6x6 Sudoku</button>
-        <button class="grid-button" data-size="9">9x9 Sudoku</button>
+        <h2>Sudoku Solver</h2>
+
+        <!-- Buttons for grid size selection -->
+        <div class="button-container">
+            <button class="grid-button" data-size="3">3x3 Sudoku</button>
+            <button class="grid-button" data-size="6">6x6 Sudoku</button>
+            <button class="grid-button" data-size="9">9x9 Sudoku</button>
+        </div>
+
+        <br>
+        <!-- Sudoku Grid -->
+        <div id="sudoku-grid" class="grid"></div>
     </div>
-<!-- Sudoku Grid -->
-    <div id="sudoku-grid" class="grid"></div>
-    <!-- Solve Button -->
-    <div class="button-container">
-        <button id="solve-button" class="solve-button">Solve Sudoku</button>
-    </div>
+    <script src="scripts.js"></script>
+
+        <!-- Solve Button -->
+        <div class="button-container">
+            <button id="solve-button" class="solve-button">Solve Sudoku</button>
+        </div>
+
+        <!-- Undo and Clear Buttons -->
+        <div class="button-container">
+            <button id="undo-button" class="action-button">Undo</button>
+            <button id="clear-button" class="action-button">Clear</button>
+        </div>
+
     
-    <!-- Undo and Clear Buttons -->
-    <div class="button-container">
-        <button id="undo-button" class="action-button">Undo</button>
-        <button id="clear-button" class="action-button">Clear</button>
-    </div>
-    
-    
-</div>
+
 
 </body>
 </html>
