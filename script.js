@@ -20,6 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Invalid input detected! Fix errors and try again.');
             return;
         }
+        undoButton.addEventListener('click', () => {
+            const cells = grid.querySelectorAll('input');
+            cells.forEach(cell => {
+                if (cell.classList.contains('user-input')) {
+                    cell.value = '';
+                    cell.classList.remove('user-input');
+                }
+            });
+        });
+    
+        clearButton.addEventListener('click', () => {
+            const cells = grid.querySelectorAll('input');
+            cells.forEach(cell => {
+                cell.value = ''; // Clear the input value
+                cell.classList.remove('user-input', 'solved', 'invalid'); // Reset classes
+            });
+        });
 
         const board = getBoard();
         if (SIZE === 3 || SIZE === 6) {
